@@ -20,4 +20,4 @@ RUN npm run build-storybook
 RUN npm install -g http-server
 
 # The default command to run when starting the container
-CMD ["http-server", "storybook-static", "-p 8083"]
+CMD ["http-server", "storybook-static", "-p", "8083"]
