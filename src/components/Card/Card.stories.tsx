@@ -6,7 +6,7 @@ import { CardProps } from "./Card.types";
 export default {
   title: "Card",
   component: Card,
-}  as Meta;
+} as Meta;
 
 const Template: Story<CardProps> = (args) => <Card {...args} />;
 

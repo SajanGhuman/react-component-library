@@ -8,7 +8,7 @@ export default {
   component: Img,
 } as Meta<typeof Img>;
 
-const    Template: Story<ImgProps> = (args) => <Img {...args} />;
+const Template: Story<ImgProps> = (args) => <Img {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

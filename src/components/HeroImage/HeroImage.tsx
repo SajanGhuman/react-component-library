@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { HeroImageProps } from "./HeroImage.types";
+import React from 'react'
+import styled from 'styled-components'
+import { type HeroImageProps } from './HeroImage.types'
 
 const HeroImageContainer = styled.div<HeroImageProps>`
   background-image: url(${(props) => props.imageUrl});
@@ -14,28 +14,29 @@ const HeroImageContainer = styled.div<HeroImageProps>`
   text-align: center;
   position: relative;
   ${(props) =>
+    props.disabled !== undefined &&
     props.disabled &&
     `
     cursor: not-allowed;
     background: none;
     background-color: darkgrey;
   `}
-`;
+`
 
 const Title = styled.h1`
   color: #fff;
-`;
+`
 
 const Subtitle = styled.h2`
   color: #fff;
-`;
+`
 
 const CallToActionButton = styled.button`
   padding: 10px 20px;
   margin-top: 20px;
   font-size: 16px;
   cursor: pointer;
-`;
+`
 
 const HeroImage: React.FC<HeroImageProps> = ({
   imageUrl,
@@ -47,13 +48,14 @@ const HeroImage: React.FC<HeroImageProps> = ({
 }) => {
   return (
     <HeroImageContainer imageUrl={imageUrl} disabled={disabled}>
-      {title && <Title>{title}</Title>}
-      {subtitle && <Subtitle>{subtitle}</Subtitle>}
-      {Text && (
-        <CallToActionButton onClick={OnClick}>{Text}</CallToActionButton>
-      )}
+      {title ?? (false && <Title>{title}</Title>)}
+      {subtitle ?? (false && <Subtitle>{subtitle}</Subtitle>)}
+      {Text ??
+        (false && (
+          <CallToActionButton onClick={OnClick}>{Text}</CallToActionButton>
+        ))}
     </HeroImageContainer>
-  );
-};
+  )
+}
 
-export default HeroImage;
+export default HeroImage
