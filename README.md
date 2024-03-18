@@ -10,5 +10,20 @@ Instructions to run on local machine with Docker
 
     Open the link in browser: "http://172.17.0.2:8018"
 
-    For running tests do : "npm run test"
+    For running Husky do: "npm install husky --save-dev" to install Husky
 
+    Then do :  "npx husky install" to initialize Husky
+
+    Navigate to ".husky/_/pre-commit" and add the following to the file:
+    
+    #!/bin/sh
+
+    # Run lint
+    npm run lint
+
+    # Run format
+    npm run format
+
+    # Run tests
+    npm test
+    
