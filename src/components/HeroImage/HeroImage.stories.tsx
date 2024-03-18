@@ -15,7 +15,7 @@ Default.args = {
   imageurl: "https://via.placeholder.com/1200x400",
   title: "Welcome",
   subtitle: "Discover our amazing services",
-  Text: "Learn More",
+  Text: "LearnMore",
 };
 
 export const Disabled = Template.bind({});
