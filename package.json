@@ -59,7 +59,7 @@
     }
   },
   "lint-staged": {
-    "*.js": "eslint --fix ",
+    "*.js": "eslint --fix && npm run test",
     "*.{js,css,md,html,json}": "prettier --cache --write"
 }
 }
