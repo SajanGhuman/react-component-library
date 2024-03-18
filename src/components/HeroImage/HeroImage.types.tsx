@@ -1,5 +1,5 @@
 export interface HeroImageProps {
-  imageUrl: string;
+  imageurl: string;
   title?: string;
   subtitle?: string;
   Text?: string;
