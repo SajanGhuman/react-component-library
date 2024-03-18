@@ -1,12 +1,12 @@
 import React from "react";
-import { Story, Meta } from "@storybook/react";
+import { type Story } from "@storybook/react";
 import Card from "./Card";
-import { CardProps } from "./Card.types";
+import { type CardProps } from "./Card.types";
 
 export default {
   title: "Card",
   component: Card,
-} as Meta;
+} as const;
 
 const Template: Story<CardProps> = (args) => <Card {...args} />;
 

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Meta, StoryObj, Story } from "@storybook/react";
+import { type Story } from "@storybook/react";
 import Dropdown from "./Dropdown";
-import { DropdownProps } from "./Dropdown.types";
+import { type DropdownProps } from "./Dropdown.types";
 
 export default {
   title: "Dropdown",
   component: Dropdown,
-} as Meta<typeof Dropdown>;
+} as const;
 
 const Template: Story<DropdownProps> = (args) => {
   const [value, setValue] = useState(args.value);
@@ -15,9 +15,9 @@ const Template: Story<DropdownProps> = (args) => {
     <Dropdown
       {...args}
       value={value}
-      onChange={(e: { target: { value: React.SetStateAction<string> } }) =>
-        setValue(e.target.value)
-      }
+      onChange={(e: { target: { value: React.SetStateAction<string> } }) => {
+        setValue(e.target.value);
+      }}
     />
   );
 };

@@ -1,5 +1,5 @@
 export interface TextProps {
-  text?: String;
+  text?: string;
   types?: "header" | "paragraph" | "copyright";
   bold?: boolean;
   italic?: boolean;

@@ -1,12 +1,12 @@
 import React from "react";
-import { Story, Meta } from "@storybook/react";
+import { type Story } from "@storybook/react";
 import Img from "./Img";
-import { ImgProps } from "./Img.types";
+import { type ImgProps } from "./Img.types";
 
 export default {
   title: "Image",
   component: Img,
-} as Meta<typeof Img>;
+} as const;
 
 const Template: Story<ImgProps> = (args) => <Img {...args} />;
 

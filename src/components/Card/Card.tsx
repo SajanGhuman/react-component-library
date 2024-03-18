@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { CardProps } from "./Card.types";
+import { type CardProps } from "./Card.types";
 
 const CardContainer = styled.div<{ disabled?: boolean }>`
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 20px;
   max-width: 300px;
-  opacity: ${(props) => (props.disabled ? 0.5 : 1)};
+  opacity: ${(props) => (props.disabled ?? false ? 0.5 : 1)};
   ${(props) =>
+    props.disabled !== undefined &&
     props.disabled &&
     `
   cursor: not-allowed;
@@ -51,10 +52,12 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <CardContainer disabled={disabled}>
-      {imageurl && <Image src={imageurl} alt={title} />}
+      {imageurl !== undefined && imageurl.trim() !== "" && (
+        <Image src={imageurl} alt={title} />
+      )}
       <Title>{title}</Title>
       <Content>{content}</Content>
-      {buttonText && (
+      {buttonText !== undefined && buttonText.trim() !== "" && (
         <Button onClick={onButtonClick} disabled={disabled}>
           {buttonText}
         </Button>

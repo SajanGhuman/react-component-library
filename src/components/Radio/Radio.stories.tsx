@@ -6,7 +6,9 @@ export default {
   component: Radio,
 };
 
-export const Default = () => <Radio id="radio1" name="radio" value="value1" />;
-export const Disabled = () => (
+export const Default: React.FC = () => (
+  <Radio id="radio1" name="radio" value="value1" />
+);
+export const Disabled: React.FC = () => (
   <Radio id="radio2" name="radio" value="value2" disabled />
 );

@@ -2,7 +2,7 @@
 FROM node:latest
 
 # Set the working directory in the container
-WORKDIR /sajan_ghuman_ui_garden
+WORKDIR /singh_sajanpreet_ui_garden_build_checks
 
 # Copy the package.json file and package-lock.json file
 COPY package*.json ./

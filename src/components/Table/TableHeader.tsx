@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { TableHeaderProps } from "./Table.types";
+import { type TableHeaderProps } from "./Table.types";
 
 const StyledTableHeader = styled.thead<TableHeaderProps>`
   font-weight: bold;

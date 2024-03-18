@@ -1,6 +1,6 @@
 export interface LabelProps {
-  text?: String;
-  color?: String;
-  htmlFor: String;
+  text?: string;
+  color?: string;
+  htmlFor: string;
   disabled?: boolean;
 }

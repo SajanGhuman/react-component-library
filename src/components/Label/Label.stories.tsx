@@ -1,15 +1,11 @@
-import React from "react";
-import { Meta, StoryObj, Story } from "@storybook/react";
+import { type StoryObj } from "@storybook/react";
 import Label from "./Label";
-import { LabelProps } from "./Label.types";
-import { ThemeProvider } from "styled-components";
+import { type LabelProps } from "./Label.types";
 
 export default {
   title: "Label",
   component: Label,
-} as Meta<typeof Label>;
-
-const Template: Story<LabelProps> = (args) => <Label {...args} />;
+} as const;
 
 export const Default: StoryObj<LabelProps> = {
   args: {

@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { LabelProps } from "./Label.types";
+import { type LabelProps } from "./Label.types";
 
 const StyledLabel = styled.label<LabelProps>`
   font-family: "Playfair Display", serif;
   cursor: pointer;
   color: ${(props) => props.theme.textColor};
   ${(props) =>
+    props.disabled !== undefined &&
     props.disabled &&
     `
     background-color: grey;

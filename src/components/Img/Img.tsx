@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { ImgProps } from "./Img.types";
+import { type ImgProps } from "./Img.types";
 
 const StyledImg = styled.img<ImgProps>`
   background-color: lightgrey;
-  opacity: ${(props) => (props.disabled ? 0.5 : 1)};
+  opacity: ${(props) => (props.disabled ?? false ? 0.5 : 1)};
   ${(props) =>
+    props.disabled !== undefined &&
     props.disabled &&
     `
     background-color: lightgrey;

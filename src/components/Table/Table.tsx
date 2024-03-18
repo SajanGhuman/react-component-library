@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { TableProps } from "./Table.types";
+import { type TableProps } from "./Table.types";
 
 const StyledTable = styled.table<TableProps>`
   width: 100%;
   border: none;
   ${(props) =>
+    props.disabled !== undefined &&
     props.disabled &&
     `
     background-color: lightgrey;

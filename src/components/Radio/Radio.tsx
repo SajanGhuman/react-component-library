@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { RadioProps } from "./Radio.types";
+import { type RadioProps } from "./Radio.types";
 
 const StyledRadio = styled.input`
   margin: 0.5rem;
   cursor: pointer;
   ${(props) =>
+    props.disabled !== undefined &&
     props.disabled &&
     `
     background-color: lightgrey;

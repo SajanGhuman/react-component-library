@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
-import { DropdownProps } from "./Dropdown.types";
+import { type DropdownProps } from "./Dropdown.types";
 
 const Select = styled.select`
   padding: 8px;

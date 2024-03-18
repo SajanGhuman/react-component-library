@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { TextProps } from "./Text.types";
+import { type TextProps } from "./Text.types";
 
 const StyledText = styled.span<TextProps>`
   font-family: "Playfair Display", serif;
   ${(props) =>
+    props.disabled !== undefined &&
     props.disabled &&
     `
     background-color: grey;

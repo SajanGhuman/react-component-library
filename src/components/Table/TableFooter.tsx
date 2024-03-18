@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { TableFooterProps } from "./Table.types";
+import { type TableFooterProps } from "./Table.types";
 
 const StyledTableFooter = styled.tfoot<TableFooterProps>`
   width: 100%;
