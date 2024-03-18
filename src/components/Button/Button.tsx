@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { ButtonProps } from "./Button.types";
 
 const StyledButton = styled.button<ButtonProps>`
-//----------Default Styles------------//
+  //----------Default Styles------------//
   border-radius: 3px;
   padding: 10px;
   font-size: 30px;
@@ -13,7 +13,9 @@ const StyledButton = styled.button<ButtonProps>`
   min-width: 80px;
   cursor: pointer;
   font-family: "Playfair Display", serif;
-  transition: background-color 0.3s linear, color 0.3s linear;
+  transition:
+    background-color 0.3s linear,
+    color 0.3s linear;
 
   //-----------Disables Styles-----------------------//
   &:disabled {
@@ -21,7 +23,6 @@ const StyledButton = styled.button<ButtonProps>`
     color: ${(props) => props.theme.textOnDisabled};
     cursor: not-allowed;
   }
-
 `;
 
 const Button: React.FC<ButtonProps> = ({

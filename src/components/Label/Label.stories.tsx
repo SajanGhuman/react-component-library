@@ -1,20 +1,20 @@
-import React from 'react';
-import { Meta, StoryObj, Story } from '@storybook/react';
-import Label from './Label';
-import  { LabelProps } from "./Label.types"
-import { ThemeProvider } from 'styled-components';
+import React from "react";
+import { Meta, StoryObj, Story } from "@storybook/react";
+import Label from "./Label";
+import { LabelProps } from "./Label.types";
+import { ThemeProvider } from "styled-components";
 
 export default {
-    title: "Label",
-    component: Label,
-  } as Meta<typeof Label>;
+  title: "Label",
+  component: Label,
+} as Meta<typeof Label>;
 
-const Template : Story<LabelProps> = (args) => <Label {...args} />
+const Template: Story<LabelProps> = (args) => <Label {...args} />;
 
 export const Default: StoryObj<LabelProps> = {
   args: {
-    htmlFor: 'my-input',
-    text: 'Username:',
+    htmlFor: "my-input",
+    text: "Username:",
   },
 };
 

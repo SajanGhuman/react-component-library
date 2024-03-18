@@ -10,7 +10,7 @@ describe("HeroImage", () => {
         imageUrl="test.jpg"
         title="Test Title"
         subtitle="Test Subtitle"
-      />
+      />,
     );
     expect(getByText("Test Title")).toBeVisible();
     expect(getByText("Test Subtitle")).toBeVisible();
@@ -23,7 +23,7 @@ describe("HeroImage", () => {
         title="Test Title"
         subtitle="Test Subtitle"
         disabled
-      />
+      />,
     );
     const heroContainer = getByText("Test Title").parentElement;
     expect(heroContainer).toHaveStyle("background-color: darkgrey");

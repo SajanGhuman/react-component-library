@@ -22,7 +22,13 @@ const Dropdown: React.FC<DropdownProps> = ({
   disabled = false,
 }) => {
   return (
-    <Select id={id} name={name} value={value} onChange={onChange} disabled={disabled}>
+    <Select
+      id={id}
+      name={name}
+      value={value}
+      onChange={onChange}
+      disabled={disabled}
+    >
       {options.map((option) => (
         <option key={option.value} value={option.value}>
           {option.label}

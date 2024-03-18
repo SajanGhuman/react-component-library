@@ -1,11 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import { RadioProps } from './Radio.types';
+import React from "react";
+import styled from "styled-components";
+import { RadioProps } from "./Radio.types";
 
 const StyledRadio = styled.input`
   margin: 0.5rem;
   cursor: pointer;
-  ${(props) => props.disabled && `
+  ${(props) =>
+    props.disabled &&
+    `
     background-color: lightgrey;
     cursor: not-allowed;
     color: #darkgrey;

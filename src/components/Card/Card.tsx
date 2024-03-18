@@ -8,7 +8,9 @@ const CardContainer = styled.div<{ disabled?: boolean }>`
   padding: 20px;
   max-width: 300px;
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-  ${(props) => props.disabled && `
+  ${(props) =>
+    props.disabled &&
+    `
   cursor: not-allowed;
   background: none;
   background-color: darkgrey;
@@ -45,17 +47,20 @@ const Card: React.FC<CardProps> = ({
   content,
   buttonText,
   onButtonClick,
-  disabled
+  disabled,
 }) => {
   return (
     <CardContainer disabled={disabled}>
       {imageurl && <Image src={imageurl} alt={title} />}
       <Title>{title}</Title>
       <Content>{content}</Content>
-      {buttonText && <Button onClick={onButtonClick} disabled={disabled}>{buttonText}</Button>}
+      {buttonText && (
+        <Button onClick={onButtonClick} disabled={disabled}>
+          {buttonText}
+        </Button>
+      )}
     </CardContainer>
   );
 };
-
 
 export default Card;

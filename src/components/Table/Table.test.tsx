@@ -1,6 +1,6 @@
 import React from "react";
-import '@testing-library/jest-dom';
-import {render, screen} from '@testing-library/react';
+import "@testing-library/jest-dom";
+import { render, screen } from "@testing-library/react";
 import Table from "./Table";
 import TableHeader from "./TableHeader";
 import TableCell from "./TableCell";
@@ -29,10 +29,10 @@ describe("Running Test for Table", () => {
             <TableCell>Footer 2</TableCell>
           </TableRow>
         </TableFooter>
-      </Table>
-    )
-    expect(screen.getByText('Cell 1')).toBeInTheDocument();
-    expect(screen.getByText('Cell 2')).toBeInTheDocument();
+      </Table>,
+    );
+    expect(screen.getByText("Cell 1")).toBeInTheDocument();
+    expect(screen.getByText("Cell 2")).toBeInTheDocument();
   });
 
   test("has correct style when disabled", () => {
@@ -56,11 +56,11 @@ describe("Running Test for Table", () => {
             <TableCell>Footer 2</TableCell>
           </TableRow>
         </TableFooter>
-      </Table>
+      </Table>,
     );
-    const table = screen.getByRole('table');
-    expect(table).toHaveStyle('background-color: lightgrey');
-    expect(table).toHaveStyle('cursor: not-allowed');
-    expect(table).toHaveStyle('color: #darkgrey');
+    const table = screen.getByRole("table");
+    expect(table).toHaveStyle("background-color: lightgrey");
+    expect(table).toHaveStyle("cursor: not-allowed");
+    expect(table).toHaveStyle("color: #darkgrey");
   });
 });

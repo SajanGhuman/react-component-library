@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import { HeroImageProps } from "./HeroImage.types";
 
 const HeroImageContainer = styled.div<HeroImageProps>`
-  background-image: url(${props => props.imageUrl});
+  background-image: url(${(props) => props.imageUrl});
   background-size: cover;
   background-position: center;
   height: 500px;
@@ -13,7 +13,9 @@ const HeroImageContainer = styled.div<HeroImageProps>`
   align-items: center;
   text-align: center;
   position: relative;
-  ${(props) => props.disabled && `
+  ${(props) =>
+    props.disabled &&
+    `
     cursor: not-allowed;
     background: none;
     background-color: darkgrey;
@@ -47,7 +49,9 @@ const HeroImage: React.FC<HeroImageProps> = ({
     <HeroImageContainer imageUrl={imageUrl} disabled={disabled}>
       {title && <Title>{title}</Title>}
       {subtitle && <Subtitle>{subtitle}</Subtitle>}
-      {Text && <CallToActionButton onClick={OnClick}>{Text}</CallToActionButton>}
+      {Text && (
+        <CallToActionButton onClick={OnClick}>{Text}</CallToActionButton>
+      )}
     </HeroImageContainer>
   );
 };

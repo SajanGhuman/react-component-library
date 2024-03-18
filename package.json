@@ -7,7 +7,9 @@
     "test": "jest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "start": ""
+    "start": "",
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
   },
   "author": "",
   "license": "ISC",
@@ -39,6 +41,13 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "jest-environment-jsdom": "^29.7.0"
+    "husky": "^9.0.11",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier --write . && git add -A ."
+    }
   }
 }

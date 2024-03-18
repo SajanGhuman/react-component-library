@@ -15,7 +15,7 @@ export interface TableRowProps {
 
 export interface TableCellProps {
   children: React.ReactNode;
-  align?: 'left' | 'right' | 'center';
+  align?: "left" | "right" | "center";
 }
 
 export interface TableFooterProps {
