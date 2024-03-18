@@ -1,3 +1,4 @@
+Instructions to run on local machine with Docker
 
 1) Pull the repo from github with: "git pull https://github.com/SajanGhuman/react-component-library.git"
 
