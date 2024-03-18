@@ -6,11 +6,11 @@ import { ThemeProvider } from "styled-components";
 
 export default {
   title: "Label",
-  component: Label,
+  component:   Label,
 } as Meta<typeof Label>;
 
-const Template: Story<LabelProps> = (args) => <Label {...args} />;
-
+const Template:    Story<LabelProps> = (args) => <Label {...args} />;
+   
 export const Default: StoryObj<LabelProps> = {
   args: {
     htmlFor: "my-input",
