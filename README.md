@@ -15,7 +15,7 @@
     Then do :  "npx husky install" to initialize Husky
 
     Navigate to ".husky/_/pre-commit" and add the following to the file:
-    
+
     #!/bin/sh
 
     # Run lint
@@ -26,4 +26,3 @@
 
     # Run tests
     npm test
-    
