@@ -8,7 +8,7 @@
 
     Finally do: "docker run -dp 8083:8083 --name singh_sajanpreet_coding_assignment13 singh_sajanpreet_coding_assignment13"
 
-    Open the link in browser: http://localhost:8083"
+    Open the link in browser: "http://localhost:8083"
 
     For running Husky do: "npm install husky --save-dev" to install Husky
 
